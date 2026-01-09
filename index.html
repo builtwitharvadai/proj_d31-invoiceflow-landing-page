@@ -1,280 +1,194 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Character encoding MUST be first -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   
+  <!-- Viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Document title with site name -->
   <title>InvoiceFlow - Simple Invoice Management for Small Businesses</title>
-  <meta name="description" content="InvoiceFlow helps small businesses create, send, and track invoices effortlessly. Streamline your billing process and get paid faster with our intuitive SaaS solution.">
   
-  <meta property="og:title" content="InvoiceFlow - Simple Invoice Management for Small Businesses">
-  <meta property="og:description" content="InvoiceFlow helps small businesses create, send, and track invoices effortlessly. Streamline your billing process and get paid faster.">
-  <meta property="og:image" content="https://invoiceflow.example.com/images/og-image.jpg">
-  <meta property="og:url" content="https://invoiceflow.example.com">
-  <meta property="og:type" content="website">
+  <!-- Meta descriptions for SEO -->
+  <meta name="description" content="InvoiceFlow helps small businesses create, send, and track invoices effortlessly. Get paid faster with our simple invoice management solution.">
   
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="InvoiceFlow - Simple Invoice Management">
-  <meta name="twitter:description" content="Streamline your billing process and get paid faster with InvoiceFlow.">
-  <meta name="twitter:image" content="https://invoiceflow.example.com/images/twitter-card.jpg">
-  
-  <link rel="canonical" href="https://invoiceflow.example.com">
-  
-  <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "InvoiceFlow",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "description": "Invoice management SaaS solution for small businesses to create, send, and track invoices effortlessly.",
-    "url": "https://invoiceflow.example.com",
-    "screenshot": "https://invoiceflow.example.com/images/screenshot.jpg",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "250"
-    }
-  }
-  </script>
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Skip navigation for accessibility -->
   <a href="#main" class="skip-link">Skip to main content</a>
   
-  <header role="banner">
-    <nav role="navigation" aria-label="Main navigation">
-      <div class="nav-container">
-        <div class="logo">
-          <a href="/" aria-label="InvoiceFlow home">
-            <span class="logo-text">InvoiceFlow</span>
-          </a>
-        </div>
-        <ul role="list" class="nav-menu">
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">InvoiceFlow</span>
+      </div>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-menu" role="list">
           <li><a href="#features">Features</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-actions">
-          <a href="/login" class="btn-secondary">Sign In</a>
-          <a href="/signup" class="btn-primary">Get Started Free</a>
-        </div>
+      </nav>
+      <div class="nav-actions">
+        <a href="#cta" class="btn-secondary">Sign In</a>
+        <a href="#cta" class="btn-primary">Start Free Trial</a>
       </div>
-    </nav>
+    </div>
   </header>
-  
+
+  <!-- Main Content -->
   <main id="main" role="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <!-- Hero Section -->
+    <section class="hero">
       <div class="hero-container">
-        <h1 id="hero-title">Simplify Your Invoice Management</h1>
-        <p class="hero-subtitle">Stop chasing payments. InvoiceFlow helps small businesses create professional invoices, track payments, and get paid faster—all in one simple platform.</p>
+        <h1>Simple Invoice Management for Small Businesses</h1>
+        <p class="hero-subtitle">Create, send, and track invoices in minutes. Get paid faster with InvoiceFlow's intuitive platform designed for small business owners.</p>
         <div class="hero-actions">
-          <a href="/signup" class="btn-primary btn-large">Start Free Trial</a>
+          <a href="#cta" class="btn-primary btn-large">Start Free Trial</a>
           <a href="#how-it-works" class="btn-secondary btn-large">See How It Works</a>
         </div>
-        <p class="hero-note">No credit card required • 14-day free trial • Cancel anytime</p>
+        <p class="hero-note">No credit card required • 14-day free trial</p>
       </div>
     </section>
-    
-    <section id="features" class="features" aria-labelledby="features-title">
+
+    <!-- Features Section -->
+    <section id="features" class="features">
       <div class="features-container">
-        <header class="section-header">
-          <h2 id="features-title">Everything You Need to Manage Invoices</h2>
-          <p class="section-subtitle">Powerful features designed specifically for small business owners who want to focus on their work, not paperwork.</p>
-        </header>
-        
+        <div class="section-header">
+          <h2>Everything You Need to Manage Invoices</h2>
+          <p class="section-subtitle">Powerful features designed to simplify your invoicing workflow and help you get paid faster.</p>
+        </div>
         <div class="features-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="9" y1="9" x2="15" y2="9"></line>
-                <line x1="9" y1="15" x2="15" y2="15"></line>
-              </svg>
-            </div>
-            <h3>Create Professional Invoices</h3>
-            <p>Design beautiful, branded invoices in minutes with our intuitive editor. Add your logo, customize colors, and include all necessary details.</p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-            </div>
-            <h3>Send & Track Instantly</h3>
-            <p>Email invoices directly to clients and get real-time notifications when they're viewed, opened, or paid. No more wondering about invoice status.</p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-            </div>
-            <h3>Accept Online Payments</h3>
-            <p>Get paid faster with integrated payment processing. Accept credit cards, bank transfers, and digital wallets with just a few clicks.</p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-            </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📄</div>
+            <h3>Quick Invoice Creation</h3>
+            <p>Create professional invoices in seconds with our intuitive templates. Add your logo, customize fields, and send instantly.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📧</div>
             <h3>Automated Reminders</h3>
-            <p>Set up automatic payment reminders for overdue invoices. Reduce late payments without the awkward follow-up conversations.</p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="20" x2="18" y2="10"></line>
-                <line x1="12" y1="20" x2="12" y2="4"></line>
-                <line x1="6" y1="20" x2="6" y2="14"></line>
-              </svg>
-            </div>
-            <h3>Financial Reports</h3>
-            <p>Get instant insights into your business finances. Track revenue, outstanding payments, and cash flow with easy-to-understand reports.</p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
+            <p>Never chase payments again. Set up automatic payment reminders to ensure you get paid on time, every time.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3>Real-Time Tracking</h3>
+            <p>Know exactly when invoices are viewed and paid. Track payment status in real-time with our dashboard.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">💳</div>
+            <h3>Multiple Payment Options</h3>
+            <p>Accept payments via credit card, bank transfer, or digital wallets. Make it easy for clients to pay you.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📱</div>
+            <h3>Mobile Access</h3>
+            <p>Manage invoices on the go. Our mobile-friendly platform works seamlessly on any device.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🔒</div>
             <h3>Secure & Compliant</h3>
-            <p>Your data is protected with bank-level encryption. We're fully compliant with GDPR, SOC 2, and industry security standards.</p>
-          </article>
+            <p>Your data is protected with bank-level security. We're fully compliant with industry standards.</p>
+          </div>
         </div>
       </div>
     </section>
-    
-    <section id="how-it-works" class="how-it-works" aria-labelledby="how-it-works-title">
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
       <div class="how-it-works-container">
-        <header class="section-header">
-          <h2 id="how-it-works-title">How InvoiceFlow Works</h2>
-          <p class="section-subtitle">Get started in three simple steps and send your first invoice in minutes.</p>
-        </header>
-        
+        <div class="section-header">
+          <h2>How It Works</h2>
+          <p class="section-subtitle">Get started with InvoiceFlow in three simple steps.</p>
+        </div>
         <div class="steps-grid">
-          <article class="step-card">
+          <div class="step-card">
             <div class="step-number" aria-hidden="true">1</div>
             <h3>Create Your Invoice</h3>
-            <p>Use our intuitive invoice builder to add client details, line items, taxes, and payment terms. Customize with your branding for a professional look.</p>
-          </article>
-          
-          <article class="step-card">
+            <p>Use our templates to create professional invoices in minutes. Add your branding and customize as needed.</p>
+          </div>
+          <div class="step-card">
             <div class="step-number" aria-hidden="true">2</div>
-            <h3>Send to Your Client</h3>
-            <p>Email invoices directly from InvoiceFlow or download as PDF. Clients receive a professional invoice with a secure payment link included.</p>
-          </article>
-          
-          <article class="step-card">
+            <h3>Send to Clients</h3>
+            <p>Send invoices directly via email or share a secure payment link. Clients can view and pay instantly.</p>
+          </div>
+          <div class="step-card">
             <div class="step-number" aria-hidden="true">3</div>
             <h3>Get Paid Faster</h3>
-            <p>Track invoice status in real-time. Clients can pay online instantly, and you receive automatic notifications when payments are received.</p>
-          </article>
+            <p>Track payments in real-time and receive automatic notifications when clients pay. Money in your account faster.</p>
+          </div>
         </div>
       </div>
     </section>
-    
-    <section id="cta" class="cta" aria-labelledby="cta-title">
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta">
       <div class="cta-container">
-        <h2 id="cta-title">Ready to Streamline Your Invoicing?</h2>
-        <p class="cta-subtitle">Join thousands of small businesses who trust InvoiceFlow to manage their invoices and get paid faster.</p>
+        <h2>Ready to Simplify Your Invoicing?</h2>
+        <p class="cta-subtitle">Join thousands of small businesses that trust InvoiceFlow to manage their invoices and get paid faster.</p>
         <div class="cta-actions">
-          <a href="/signup" class="btn-primary btn-large">Start Your Free Trial</a>
+          <a href="#signup" class="btn-primary btn-large">Start Your Free Trial</a>
         </div>
-        <p class="cta-note">14-day free trial • No credit card required • Setup in 5 minutes</p>
+        <p class="cta-note">No credit card required • Cancel anytime</p>
       </div>
     </section>
   </main>
-  
-  <footer role="contentinfo">
+
+  <!-- Footer -->
+  <footer>
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-column">
           <h3 class="footer-heading">InvoiceFlow</h3>
-          <p class="footer-description">Simple invoice management for small businesses. Create, send, and track invoices effortlessly.</p>
+          <p class="footer-description">Simple invoice management for small businesses. Get paid faster with our intuitive platform.</p>
         </div>
-        
         <div class="footer-column">
           <h3 class="footer-heading">Product</h3>
-          <ul role="list" class="footer-links">
-            <li><a href="/features">Features</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/integrations">Integrations</a></li>
-            <li><a href="/security">Security</a></li>
+          <ul class="footer-links" role="list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#integrations">Integrations</a></li>
           </ul>
         </div>
-        
-        <div class="footer-column">
-          <h3 class="footer-heading">Resources</h3>
-          <ul role="list" class="footer-links">
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/help">Help Center</a></li>
-            <li><a href="/templates">Invoice Templates</a></li>
-            <li><a href="/api">API Documentation</a></li>
-          </ul>
-        </div>
-        
         <div class="footer-column">
           <h3 class="footer-heading">Company</h3>
-          <ul role="list" class="footer-links">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/press">Press Kit</a></li>
+          <ul class="footer-links" role="list">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#careers">Careers</a></li>
           </ul>
         </div>
-        
+        <div class="footer-column">
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#guides">Guides</a></li>
+          </ul>
+        </div>
         <div class="footer-column">
           <h3 class="footer-heading">Legal</h3>
-          <ul role="list" class="footer-links">
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
-            <li><a href="/cookies">Cookie Policy</a></li>
-            <li><a href="/gdpr">GDPR</a></li>
+          <ul class="footer-links" role="list">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#security">Security</a></li>
           </ul>
         </div>
       </div>
-      
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2024 InvoiceFlow. All rights reserved.</p>
         <div class="footer-social">
-          <a href="https://twitter.com/invoiceflow" aria-label="Follow us on Twitter" rel="noopener noreferrer" target="_blank">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
+          <a href="#twitter" aria-label="Twitter">
+            <span aria-hidden="true">𝕏</span>
           </a>
-          <a href="https://linkedin.com/company/invoiceflow" aria-label="Follow us on LinkedIn" rel="noopener noreferrer" target="_blank">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
+          <a href="#linkedin" aria-label="LinkedIn">
+            <span aria-hidden="true">in</span>
           </a>
-          <a href="https://facebook.com/invoiceflow" aria-label="Follow us on Facebook" rel="noopener noreferrer" target="_blank">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
+          <a href="#facebook" aria-label="Facebook">
+            <span aria-hidden="true">f</span>
           </a>
         </div>
       </div>
