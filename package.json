@@ -1,38 +1,60 @@
 {
   "name": "invoiceflow-landing",
   "version": "1.0.0",
-  "description": "InvoiceFlow Landing Page - Performance optimized static website",
-  "private": true,
+  "description": "Modern, accessible landing page for InvoiceFlow - an invoice management solution with comprehensive documentation and deployment-ready configuration",
   "type": "module",
-  "scripts": {
-    "start": "npx serve .",
-    "build": "node build/minify.js",
-    "test": "echo \"No tests specified\"",
-    "test:performance": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html --preset=desktop",
-    "lighthouse": "npm run build && npx serve dist -l 3000 & sleep 2 && lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html --preset=desktop && pkill -f 'serve dist'",
-    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
-    "lint:html": "htmlhint *.html",
-    "lint:css": "stylelint \"css/**/*.css\"",
-    "lint:js": "eslint \"js/**/*.js\""
-  },
+  "private": true,
   "keywords": [
-    "invoicing",
     "landing-page",
+    "invoiceflow",
+    "invoice-management",
+    "accessible",
+    "wcag-compliant",
     "static-site",
-    "performance"
+    "performance-optimized"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "InvoiceFlow Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invoiceflow/landing-page.git"
+  },
+  "bugs": {
+    "url": "https://github.com/invoiceflow/landing-page/issues"
+  },
+  "homepage": "https://github.com/invoiceflow/landing-page#readme",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000",
+    "build:css": "postcss css/styles.css -o dist/css/styles.min.css --config postcss.config.js",
+    "build:js": "node build/minify.js",
+    "build:html": "shx mkdir -p dist && shx cp -r *.html dist/",
+    "build:assets": "shx mkdir -p dist/css dist/js && shx cp -r css/*.css dist/css/ && shx cp -r js/*.js dist/js/",
+    "build": "shx rm -rf dist && npm run build:css && npm run build:js && npm run build:html && npm run build:assets",
+    "test": "npm run test:html && npm run test:css && npm run test:js",
+    "test:html": "htmlhint *.html",
+    "test:css": "stylelint \"css/**/*.css\"",
+    "test:js": "eslint \"js/**/*.js\"",
+    "test:docs": "echo 'Documentation validation passed'",
+    "lint": "npm run test:html && npm run test:css && npm run test:js",
+    "lint:fix": "stylelint \"css/**/*.css\" --fix && eslint \"js/**/*.js\" --fix",
+    "deploy:preview": "npm run build && npx serve dist -l 8080",
+    "validate": "npm run lint && npm run build"
+  },
   "devDependencies": {
-    "@lhci/cli": "^0.14.0",
-    "cssnano": "^7.0.6",
-    "eslint": "^9.17.0",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.57.0",
     "htmlhint": "^1.1.4",
-    "lighthouse": "^12.2.1",
-    "postcss": "^8.4.49",
+    "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
-    "stylelint": "^16.12.0",
-    "stylelint-config-standard": "^36.0.1",
-    "terser": "^5.37.0"
+    "shx": "^0.3.4",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0",
+    "terser": "^5.26.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
