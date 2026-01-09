@@ -1,28 +1,25 @@
 {
   "name": "invoiceflow-landing-page",
   "version": "1.0.0",
-  "description": "A clean, minimal landing page for InvoiceFlow - SaaS solution for small business invoice management",
+  "description": "Professional landing page for InvoiceFlow - Simple invoicing for small businesses",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "live-server --port=3000 --open=index.html",
-    "build": "npm run build:css && npm run build:js && npm run build:html && npm run build:assets",
-    "build:css": "postcss src/css/main.css -o dist/css/main.min.css",
-    "build:js": "terser src/js/main.js -o dist/js/main.min.js --compress --mangle",
-    "build:html": "shx cp -r src/*.html dist/",
-    "build:assets": "shx mkdir -p dist/images dist/fonts && shx cp -r src/images/* dist/images/ 2>/dev/null || true && shx cp -r src/fonts/* dist/fonts/ 2>/dev/null || true",
-    "validate": "npm run lint:html && npm run lint:css",
-    "lint:html": "htmlhint src/**/*.html",
-    "lint:css": "stylelint src/css/**/*.css",
-    "start": "npm run dev",
-    "preview": "npx serve dist"
+    "dev": "npx serve .",
+    "build": "npm run build:css",
+    "build:css": "postcss css/styles.css -o dist/css/styles.min.css && shx mkdir -p dist && shx cp index.html dist/ && shx cp -r css/styles.css dist/css/",
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "lint:html": "htmlhint *.html",
+    "lint": "npm run lint:css && npm run lint:html",
+    "start": "npx serve dist",
+    "test:css": "stylelint \"css/**/*.css\" && echo 'CSS validation passed'",
+    "deploy:preview": "npm run build && npx serve dist"
   },
   "keywords": [
-    "invoiceflow",
+    "invoicing",
+    "small-business",
     "landing-page",
-    "invoice-management",
-    "saas",
-    "small-business"
+    "static-site"
   ],
   "author": "",
   "license": "MIT",
@@ -30,16 +27,10 @@
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "htmlhint": "^1.1.4",
-    "live-server": "^1.2.2",
     "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
     "shx": "^0.3.4",
-    "stylelint": "^16.0.2",
-    "stylelint-config-standard": "^36.0.0",
-    "terser": "^5.26.0"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0"
   }
 }
