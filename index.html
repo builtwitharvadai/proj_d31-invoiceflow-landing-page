@@ -4,8 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>InvoiceFlow - Simple Invoicing for Small Businesses</title>
-  <meta name="description" content="Stop wasting time on invoicing. InvoiceFlow helps small businesses create professional invoices in minutes, not hours.">
+  <meta name="description" content="Streamline your invoicing process with InvoiceFlow. Automated invoice generation, payment tracking, and client management designed for small businesses.">
+  
+  <meta property="og:title" content="InvoiceFlow - Simple Invoicing for Small Businesses">
+  <meta property="og:description" content="Streamline your invoicing process with InvoiceFlow. Automated invoice generation, payment tracking, and client management designed for small businesses.">
+  <meta property="og:type" content="website">
+  
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -29,22 +39,62 @@
     <section class="hero">
       <div class="hero-container">
         <div class="hero-content">
-          <h1>Stop Wasting Time on Invoicing. Get Paid Faster.</h1>
-          <p class="hero-subtitle">Small business owners spend hours each week creating invoices and chasing payments. InvoiceFlow automates the busywork so you can focus on growing your business.</p>
+          <h1>Simple Invoicing for Small Businesses</h1>
+          <p class="hero-subtitle">Stop chasing payments and start growing your business. InvoiceFlow automates your invoicing process so you can focus on what matters.</p>
           <div class="hero-actions">
             <a href="#signup" class="btn-primary btn-large">Start Free Trial</a>
             <a href="#demo" class="btn-secondary btn-large">Watch Demo</a>
           </div>
           <p class="hero-note">No credit card required. 14-day free trial.</p>
         </div>
-        <img 
-          src="https://images.unsplash.com/photo-1554224311-beee460c201f?w=1200&h=600&fit=crop" 
-          alt="Small business owner working on laptop with organized invoices and financial documents" 
-          class="hero-image"
-          loading="eager"
-          width="1200"
-          height="600"
-        >
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop" alt="Professional workspace with laptop showing invoice dashboard" class="hero-image" loading="eager">
+        </div>
+      </div>
+    </section>
+    
+    <section id="features" class="features">
+      <div class="features-container">
+        <h2>Everything You Need to Get Paid Faster</h2>
+        <p class="features-subtitle">Powerful features designed specifically for small business owners who want to spend less time on paperwork and more time growing their business.</p>
+        
+        <div class="features-grid">
+          <article class="feature-card" role="article">
+            <div class="feature-icon" aria-hidden="true">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+            <h3>Automated Invoice Generation</h3>
+            <p class="feature-description">Create professional invoices in seconds with customizable templates. No more manual data entry or formatting headaches. Set up recurring invoices and let InvoiceFlow handle the rest while you focus on delivering great service to your clients.</p>
+            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop" alt="Professional invoice template on computer screen" class="feature-image" loading="lazy">
+          </article>
+          
+          <article class="feature-card" role="article">
+            <div class="feature-icon" aria-hidden="true">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h3>Real-Time Payment Tracking</h3>
+            <p class="feature-description">Know exactly who owes you money and when payments are due. Get instant notifications when clients view or pay invoices. Automated payment reminders mean you never have to chase late payments again, improving your cash flow and reducing stress.</p>
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="Payment tracking dashboard showing transaction status" class="feature-image" loading="lazy">
+          </article>
+          
+          <article class="feature-card" role="article">
+            <div class="feature-icon" aria-hidden="true">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Smart Client Management</h3>
+            <p class="feature-description">Keep all your client information organized in one place. Track payment history, contact details, and project notes effortlessly. Build stronger relationships with insights into client behavior and payment patterns, helping you identify your best customers.</p>
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Team collaboration and client management interface" class="feature-image" loading="lazy">
+          </article>
+          
+          <article class="feature-card" role="article">
+            <div class="feature-icon" aria-hidden="true">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Insightful Reporting</h3>
+            <p class="feature-description">Make data-driven decisions with comprehensive financial reports. Track revenue trends, outstanding payments, and business growth at a glance. Export reports for your accountant or tax preparation, saving hours during tax season and giving you clear visibility into your business health.</p>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Business analytics dashboard with charts and graphs" class="feature-image" loading="lazy">
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -54,14 +104,14 @@
       <div class="footer-grid">
         <div>
           <h3 class="footer-heading">InvoiceFlow</h3>
-          <p class="footer-description">Simple invoicing for small businesses.</p>
+          <p class="footer-description">Simple invoicing for small businesses. Get paid faster and grow your business.</p>
         </div>
         <div>
           <h3 class="footer-heading">Product</h3>
           <ul class="footer-links" role="list">
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#demo">Demo</a></li>
+            <li><a href="#integrations">Integrations</a></li>
           </ul>
         </div>
         <div>
@@ -69,7 +119,7 @@
           <ul class="footer-links" role="list">
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#support">Support</a></li>
+            <li><a href="#careers">Careers</a></li>
           </ul>
         </div>
         <div>
@@ -86,6 +136,7 @@
     </div>
   </footer>
   
-  <script src="js/hero.js"></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/features.js" defer></script>
 </body>
 </html>
