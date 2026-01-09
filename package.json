@@ -1,36 +1,46 @@
 {
   "name": "invoiceflow-landing-page",
   "version": "1.0.0",
-  "description": "Professional landing page for InvoiceFlow - Simple invoicing for small businesses",
+  "description": "Landing page for InvoiceFlow - Modern invoice management solution",
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "npx serve .",
     "dev": "npx serve .",
-    "build": "npm run build:css",
-    "build:css": "postcss css/styles.css -o dist/css/styles.min.css && shx mkdir -p dist && shx cp index.html dist/ && shx cp -r css/styles.css dist/css/",
-    "lint:css": "stylelint \"css/**/*.css\"",
+    "build": "npm run build:css && npm run build:js && npm run build:html",
+    "build:css": "postcss css/styles.css -o dist/css/styles.min.css",
+    "build:js": "npm run build:js:features && npm run build:js:form && npm run build:js:hero && npm run build:js:workflow && npm run build:js:animations && npm run build:js:navigation",
+    "build:js:features": "terser js/features.js -o dist/js/features.min.js --compress --mangle",
+    "build:js:form": "terser js/form-validation.js -o dist/js/form-validation.min.js --compress --mangle",
+    "build:js:hero": "terser js/hero.js -o dist/js/hero.min.js --compress --mangle",
+    "build:js:workflow": "terser js/workflow.js -o dist/js/workflow.min.js --compress --mangle",
+    "build:js:animations": "terser js/animations.js -o dist/js/animations.min.js --compress --mangle",
+    "build:js:navigation": "terser js/navigation.js -o dist/js/navigation.min.js --compress --mangle",
+    "build:html": "shx cp -r *.html dist/",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "htmlhint *.html",
-    "lint": "npm run lint:css && npm run lint:html",
-    "start": "npx serve dist",
-    "test:css": "stylelint \"css/**/*.css\" && echo 'CSS validation passed'",
-    "deploy:preview": "npm run build && npx serve dist"
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "lint:js": "eslint .",
+    "test:js": "echo \"JavaScript tests not yet implemented\" && exit 0"
   },
-  "keywords": [
-    "invoicing",
-    "small-business",
-    "landing-page",
-    "static-site"
-  ],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
+    "eslint": "^9.0.0",
     "htmlhint": "^1.1.4",
     "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
     "shx": "^0.3.4",
-    "stylelint": "^16.1.0",
-    "stylelint-config-standard": "^36.0.0"
-  }
+    "stylelint": "^16.0.2",
+    "stylelint-config-standard": "^36.0.0",
+    "terser": "^5.26.0"
+  },
+  "keywords": [
+    "invoiceflow",
+    "landing-page",
+    "invoice-management",
+    "static-site"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
 }
